@@ -1,0 +1,97 @@
+.container {
+  margin-inline: auto;
+  width: min(90%, 150rem);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --clr-strong-cyan: hsl(171, 66%, 44%);
+  --clr-light-blue: hsl(233, 100%, 69%);
+  --clr-dark-grayish-blue: hsl(210, 10%, 33%);
+  --clr-grayish-blue: hsl(201, 11%, 66%);
+  font-size: 62.5%;
+  --ff-primary-one: "BaiJamjuree-Regular", sans-serif;
+  --ff-primary-two: "BaiJamjuree-SemiBold", sans-serif;
+  --fs-600: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+  --fs-400: 1.5rem;
+}
+@font-face {
+  :root {
+    font-family: "BaiJamjuree-Regular";
+    src: url(../../assets/fonts/BaiJamjuree-Regular.ttf);
+  }
+}
+@font-face {
+  :root {
+    font-family: "BaiJamjuree-SemiBold";
+    src: url(../../assets/fonts/BaiJamjuree-SemiBold.ttf);
+  }
+}
+
+/* 
+abstracts contains no actual styles, 
+just Sass mechanisms that help define styles 
+in other directories (sometimes called "helpers"). 
+This includes things like 
+global variables, functions, and mixins
+*/
+/*
+components are like "mini" layouts. 
+Styles for small, reusable pieces of 
+the site should reside here 
+(think buttons, forms, profile pictures, etc.)
+*/
+.hero__heading-one {
+  font-size: var(--fs-600);
+  line-height: 1;
+  font-family: var(--ff-primary-two);
+  font-weight: 600;
+  color: var(--clr-dark-grayish-blue);
+}
+
+/*
+layout contains styles for different 
+aspects of the site's structural 
+layout (think of areas like nav bars, 
+headers, footers, etc.)
+*/
+
+/*# sourceMappingURL=style.css.map */

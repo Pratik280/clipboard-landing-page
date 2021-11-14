@@ -1,0 +1,29 @@
+:root {
+
+  --clr-strong-cyan: hsl(171, 66%, 44%);
+  --clr-light-blue: hsl(233, 100%, 69%);
+  --clr-dark-grayish-blue: hsl(210, 10%, 33%);
+  --clr-grayish-blue: hsl(201, 11%, 66%);
+
+  @font-face {
+    font-family: 'BaiJamjuree-Regular';
+    src: url(../../assets/fonts/BaiJamjuree-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: 'BaiJamjuree-SemiBold';
+    src: url(../../assets/fonts/BaiJamjuree-SemiBold.ttf);
+  }
+
+  // - Weights: 400, 600
+
+  font-size: 62.5%;
+  --ff-primary-one: 'BaiJamjuree-Regular', sans-serif;
+  --ff-primary-two: 'BaiJamjuree-SemiBold', sans-serif;
+
+  // --fs-700: clamp(3.5rem, 5vw, 2.5rem);
+  // --fs-700: clamp(3.5rem, calc(5vw + 1rem), 2.5rem);
+  --fs-600: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+  // --fs-400: clamp(1.5rem, 1vw, 1.5rem);
+  --fs-400: 1.5rem;
+}

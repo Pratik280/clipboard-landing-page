@@ -1,0 +1,9 @@
+@use '../abstracts';
+@use '../base';
+
+.hero {
+  
+  &__heading-one {
+    @include abstracts.bold-text(var(--fs-600), 1);
+  }
+}
