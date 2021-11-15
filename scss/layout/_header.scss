@@ -2,30 +2,44 @@
 @use '../base';
 
 .hero {
-  
-  background: #eee;
-  padding: 7rem 0;
-  &__logo {
 
+  background: url('../../assets/images/bg-header-mobile.png');
+  @media (min-width: 45em) { 
+    background: url('../../assets/images/bg-header-desktop.png'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
-  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 7rem 0;
+
   &__heading-one {
     @include abstracts.bold-text(var(--fs-900), 1);
-  }
-
-  &__heading-two {
-    @include abstracts.bold-text(var(--fs-700), 1);
+    margin-top: 3.5rem;
   }
 
   &__text--one {
-    @include abstracts.normal-text(var(--fs-500), 1.2, center);
+    margin-top: 2rem;
+    @include abstracts.normal-text(var(--fs-500), 1.4, center);
     max-width: 60rem;
     margin-inline: auto;
   }
 
+  .btn-wrapper { margin-top: 3rem; }
+
+  &__heading-two {
+    margin-top: 7.5rem;
+    @include abstracts.bold-text(var(--fs-700), 1);
+  }
+
+
   &__text--two {
-    @include abstracts.normal-text(var(--fs-400), 1.2, center);
+    margin-top: 2rem;
+    @include abstracts.normal-text(var(--fs-400), 1.4, center);
     max-width: 60rem;
     margin-inline: auto;
   }
 }
+

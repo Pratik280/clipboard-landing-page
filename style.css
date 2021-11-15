@@ -63,21 +63,34 @@ global variables, functions, and mixins
 */
 .btn {
   display: inline-block;
-  margin-inline: auto;
   font-size: var(--fs-400);
   text-align: center;
   font-family: var(--ff-primary);
   font-weight: 600;
   color: #fff;
   background: var(--btn-bgcolor, black);
-  padding: 1.74rem 4rem;
+  padding: 1.15rem 3.5rem;
   border-radius: 50vw;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .btn--ios {
   --btn-bgcolor: hsl(171, 66%, 44%);
 }
 .btn--mac {
   --btn-bgcolor: hsl(233, 100%, 69%);
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+@media (min-width: 60em) {
+  .btn-wrapper {
+    flex-direction: row;
+  }
 }
 
 /*
@@ -87,8 +100,19 @@ the site should reside here
 (think buttons, forms, profile pictures, etc.)
 */
 .hero {
-  background: #eee;
+  background: url("../../assets/images/bg-header-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding: 7rem 0;
+}
+@media (min-width: 45em) {
+  .hero {
+    background: url("../../assets/images/bg-header-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 .hero__heading-one {
   font-size: var(--fs-900);
@@ -97,18 +121,12 @@ the site should reside here
   font-weight: 600;
   color: var(--clr-dark-grayish-blue);
   text-align: center;
-}
-.hero__heading-two {
-  font-size: var(--fs-700);
-  line-height: 1;
-  font-family: var(--ff-primary);
-  font-weight: 600;
-  color: var(--clr-dark-grayish-blue);
-  text-align: center;
+  margin-top: 3.5rem;
 }
 .hero__text--one {
+  margin-top: 2rem;
   font-size: var(--fs-500);
-  line-height: 1.2;
+  line-height: 1.4;
   text-align: center;
   font-family: var(--ff-primary);
   font-weight: 400;
@@ -116,9 +134,22 @@ the site should reside here
   max-width: 60rem;
   margin-inline: auto;
 }
+.hero .btn-wrapper {
+  margin-top: 3rem;
+}
+.hero__heading-two {
+  margin-top: 7.5rem;
+  font-size: var(--fs-700);
+  line-height: 1;
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  color: var(--clr-dark-grayish-blue);
+  text-align: center;
+}
 .hero__text--two {
+  margin-top: 2rem;
   font-size: var(--fs-400);
-  line-height: 1.2;
+  line-height: 1.4;
   text-align: center;
   font-family: var(--ff-primary);
   font-weight: 400;
