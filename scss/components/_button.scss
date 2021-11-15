@@ -1,2 +1,25 @@
 @use '../abstracts';
 @use '../base';
+
+.btn {
+  display: inline-block;
+  margin-inline: auto;
+  font-size: var(--fs-400);
+  text-align: center;
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  color: #fff;
+  background: var(--btn-bgcolor, black);
+  padding: 1.74rem 4rem;
+  border-radius: 50vw;
+
+  &--ios {
+    --btn-bgcolor: hsl(171, 66%, 44%);
+  }
+
+  &--mac {
+    --btn-bgcolor: hsl(233, 100%, 69%);
+  }
+}
+
+

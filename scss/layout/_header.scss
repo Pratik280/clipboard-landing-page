@@ -3,7 +3,29 @@
 
 .hero {
   
+  background: #eee;
+  padding: 7rem 0;
+  &__logo {
+
+  }
+  
   &__heading-one {
-    @include abstracts.bold-text(var(--fs-600), 1);
+    @include abstracts.bold-text(var(--fs-900), 1);
+  }
+
+  &__heading-two {
+    @include abstracts.bold-text(var(--fs-700), 1);
+  }
+
+  &__text--one {
+    @include abstracts.normal-text(var(--fs-500), 1.2, center);
+    max-width: 60rem;
+    margin-inline: auto;
+  }
+
+  &__text--two {
+    @include abstracts.normal-text(var(--fs-400), 1.2, center);
+    max-width: 60rem;
+    margin-inline: auto;
   }
 }
