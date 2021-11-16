@@ -24,17 +24,11 @@
 }
 
 .features-one {
-  margin-top: 7.5rem;
+  padding-top: 7.5rem;
   @media (min-width: 60em) {
     display: flex;
     flex-direction: row;
     gap: 7.5rem;
-  }
-
-  &__fig {
-    @media (min-width: 60em) { 
-      margin-left: -10rem;
-    }
   }
 
   &__list-item {
@@ -52,3 +46,31 @@
     margin-top: 1rem;
   }
 }
+
+.features-two {
+  padding: 3.5rem 0;
+
+  &__list{
+    list-style: none;
+  }
+
+  &__icon {
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+
+  &__heading {
+    @include abstracts.bold-text(var(--fs-600), 1);
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  &__text {
+    @include abstracts.normal-text(var(--fs-400), 1.4);
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+}
+

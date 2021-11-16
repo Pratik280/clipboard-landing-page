@@ -9,6 +9,17 @@
   justify-content: center;
 }
 
+.split {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.split > * {
+  flex-basis: 30%;
+  min-width: 25em;
+}
+
 /**
  * Set up a decent box model on the root element
  */
@@ -186,18 +197,13 @@ the site should reside here
 }
 
 .features-one {
-  margin-top: 7.5rem;
+  padding-top: 7.5rem;
 }
 @media (min-width: 60em) {
   .features-one {
     display: flex;
     flex-direction: row;
     gap: 7.5rem;
-  }
-}
-@media (min-width: 60em) {
-  .features-one__fig {
-    margin-left: -10rem;
   }
 }
 .features-one__list-item {
@@ -228,6 +234,37 @@ the site should reside here
   .features-one__list-text {
     text-align: left;
   }
+}
+
+.features-two {
+  padding: 3.5rem 0;
+}
+.features-two__list {
+  list-style: none;
+}
+.features-two__icon {
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+.features-two__heading {
+  font-size: var(--fs-600);
+  line-height: 1;
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  color: var(--clr-dark-grayish-blue);
+  text-align: center;
+  margin-top: 3rem;
+}
+.features-two__text {
+  font-size: var(--fs-400);
+  line-height: 1.4;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  color: var(--clr-grayish-blue);
+  text-align: center;
+  margin-top: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
