@@ -49,9 +49,9 @@ a {
   --ff-primary: "Bai Jamjuree", sans-serif;
   --fs-900: 3rem;
   --fs-700: 2.5rem;
-  --fs-600: clamp(2rem, calc(2vw + 1rem), 2.5rem);
+  --fs-600: clamp(1.6rem, calc(2vw + 1rem), 1.7rem);
   --fs-500: clamp(1.5rem, calc(1vw + 1rem), 1.75rem);
-  --fs-400: clamp(1.25rem, calc(1vw + 1rem), 1.5rem);
+  --fs-400: clamp(1.25rem, calc(1vw + 1rem), 1.3rem);
 }
 
 /* 
@@ -100,11 +100,11 @@ the site should reside here
 (think buttons, forms, profile pictures, etc.)
 */
 .hero {
+  padding: 7rem 0;
   background: url("../../assets/images/bg-header-mobile.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 7rem 0;
 }
 @media (min-width: 45em) {
   .hero {
@@ -127,10 +127,10 @@ the site should reside here
   margin-top: 2rem;
   font-size: var(--fs-500);
   line-height: 1.4;
-  text-align: center;
   font-family: var(--ff-primary);
   font-weight: 400;
   color: var(--clr-grayish-blue);
+  text-align: center;
   max-width: 60rem;
   margin-inline: auto;
 }
@@ -150,19 +150,84 @@ the site should reside here
   margin-top: 2rem;
   font-size: var(--fs-400);
   line-height: 1.4;
-  text-align: center;
   font-family: var(--ff-primary);
   font-weight: 400;
   color: var(--clr-grayish-blue);
+  text-align: center;
   max-width: 60rem;
   margin-inline: auto;
 }
 
-/*
-layout contains styles for different 
-aspects of the site's structural 
-layout (think of areas like nav bars, 
-headers, footers, etc.)
-*/
+.main {
+  padding-bottom: 7rem;
+}
+.main__heading {
+  margin-top: 7.5rem;
+  font-size: var(--fs-700);
+  line-height: 1;
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  color: var(--clr-dark-grayish-blue);
+  text-align: center;
+}
+.main__text {
+  margin-top: 2rem;
+  font-size: var(--fs-400);
+  line-height: 1.4;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  color: var(--clr-grayish-blue);
+  text-align: center;
+  max-width: 60rem;
+  margin-inline: auto;
+}
+.main .btn-wrapper {
+  margin-top: 3rem;
+}
+
+.features-one {
+  margin-top: 7.5rem;
+}
+@media (min-width: 60em) {
+  .features-one {
+    display: flex;
+    flex-direction: row;
+    gap: 7.5rem;
+  }
+}
+@media (min-width: 60em) {
+  .features-one__fig {
+    margin-left: -10rem;
+  }
+}
+.features-one__list-item {
+  list-style: none;
+  font-size: var(--fs-600);
+  line-height: 1;
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  color: var(--clr-dark-grayish-blue);
+  text-align: center;
+  margin-top: 4rem;
+}
+@media (min-width: 60em) {
+  .features-one__list-item {
+    text-align: left;
+  }
+}
+.features-one__list-text {
+  font-size: var(--fs-400);
+  line-height: 1.4;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  color: var(--clr-grayish-blue);
+  text-align: center;
+  margin-top: 1rem;
+}
+@media (min-width: 60em) {
+  .features-one__list-text {
+    text-align: left;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

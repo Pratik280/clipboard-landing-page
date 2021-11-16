@@ -3,6 +3,7 @@
 
 .hero {
 
+  padding: 7rem 0;
   background: url('../../assets/images/bg-header-mobile.png');
   @media (min-width: 45em) { 
     background: url('../../assets/images/bg-header-desktop.png'); 
@@ -13,16 +14,17 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 7rem 0;
 
   &__heading-one {
     @include abstracts.bold-text(var(--fs-900), 1);
+    text-align: center;
     margin-top: 3.5rem;
   }
 
   &__text--one {
     margin-top: 2rem;
-    @include abstracts.normal-text(var(--fs-500), 1.4, center);
+    @include abstracts.normal-text(var(--fs-500), 1.4);
+    text-align: center;
     max-width: 60rem;
     margin-inline: auto;
   }
@@ -32,12 +34,14 @@
   &__heading-two {
     margin-top: 7.5rem;
     @include abstracts.bold-text(var(--fs-700), 1);
+    text-align: center;
   }
 
 
   &__text--two {
     margin-top: 2rem;
-    @include abstracts.normal-text(var(--fs-400), 1.4, center);
+    @include abstracts.normal-text(var(--fs-400), 1.4);
+    text-align: center;
     max-width: 60rem;
     margin-inline: auto;
   }

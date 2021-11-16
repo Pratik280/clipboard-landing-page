@@ -1,0 +1,54 @@
+@use '../abstracts';
+@use '../base';
+
+.main {
+
+  padding-bottom: 7rem;
+
+  &__heading {
+    margin-top: 7.5rem;
+    @include abstracts.bold-text(var(--fs-700), 1);
+    text-align: center;
+  }
+
+
+  &__text {
+    margin-top: 2rem;
+    @include abstracts.normal-text(var(--fs-400), 1.4);
+    text-align: center;
+    max-width: 60rem;
+    margin-inline: auto;
+  }
+
+  .btn-wrapper { margin-top: 3rem; }
+}
+
+.features-one {
+  margin-top: 7.5rem;
+  @media (min-width: 60em) {
+    display: flex;
+    flex-direction: row;
+    gap: 7.5rem;
+  }
+
+  &__fig {
+    @media (min-width: 60em) { 
+      margin-left: -10rem;
+    }
+  }
+
+  &__list-item {
+    list-style: none;
+    @include abstracts.bold-text(var(--fs-600), 1);
+    text-align: center;
+    @media (min-width: 60em) { text-align: left; }
+    margin-top: 4rem;
+  }
+
+  &__list-text {
+    @include abstracts.normal-text(var(--fs-400), 1.4);
+    text-align: center;
+    @media (min-width: 60em) { text-align: left; }
+    margin-top: 1rem;
+  }
+}
