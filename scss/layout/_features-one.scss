@@ -1,0 +1,31 @@
+@use '../abstracts';
+@use '../base';
+
+.features-one {
+  padding-top: 7.5rem;
+  @media (min-width: 60em) {
+    display: flex;
+    flex-direction: row;
+    gap: 7.5rem;
+  }
+
+  &__list-item {
+    list-style: none;
+    margin-top: 4rem;
+  }
+
+  &__heading {
+    @include abstracts.bold-text(var(--fs-600), 1);
+    text-align: center;
+    @media (min-width: 60em) { text-align: left; }
+  }
+
+  &__list-text {
+    @include abstracts.normal-text(var(--fs-400), 1.4);
+    text-align: center;
+    @media (min-width: 60em) { text-align: left; }
+    margin-top: 1rem;
+  }
+}
+
+

@@ -9,17 +9,6 @@
   justify-content: center;
 }
 
-.split {
-  display: flex;
-  gap: 1em;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.split > * {
-  flex-basis: 30%;
-  min-width: 25em;
-}
-
 /**
  * Set up a decent box model on the root element
  */
@@ -62,7 +51,7 @@ a {
   --fs-700: 2.5rem;
   --fs-600: clamp(1.6rem, calc(2vw + 1rem), 1.7rem);
   --fs-500: clamp(1.5rem, calc(1vw + 1rem), 1.75rem);
-  --fs-400: clamp(1.25rem, calc(1vw + 1rem), 1.3rem);
+  --fs-400: clamp(1.4rem, calc(1vw + 1rem), 1.45rem);
 }
 
 /* 
@@ -195,6 +184,11 @@ the site should reside here
 .main .btn-wrapper {
   margin-top: 3rem;
 }
+.main__devices-img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
 
 .features-one {
   padding-top: 7.5rem;
@@ -208,16 +202,18 @@ the site should reside here
 }
 .features-one__list-item {
   list-style: none;
+  margin-top: 4rem;
+}
+.features-one__heading {
   font-size: var(--fs-600);
   line-height: 1;
   font-family: var(--ff-primary);
   font-weight: 600;
   color: var(--clr-dark-grayish-blue);
   text-align: center;
-  margin-top: 4rem;
 }
 @media (min-width: 60em) {
-  .features-one__list-item {
+  .features-one__heading {
     text-align: left;
   }
 }
@@ -241,6 +237,14 @@ the site should reside here
 }
 .features-two__list {
   list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.features-two__list > * {
+  flex-basis: 30%;
+  min-width: 25rem;
 }
 .features-two__icon {
   height: 50px;
@@ -265,6 +269,21 @@ the site should reside here
   color: var(--clr-grayish-blue);
   text-align: center;
   margin-top: 1.5rem;
+}
+
+.customers {
+  padding: 4rem 0;
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.customers > * {
+  flex-basis: 10%;
+  min-width: 25rem;
+}
+.customers__img {
+  height: 4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

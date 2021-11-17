@@ -1,0 +1,31 @@
+@use '../abstracts';
+@use '../base';
+
+.features-two {
+  padding: 3.5rem 0;
+
+  &__list{
+    list-style: none;
+  @include abstracts.split(1rem, 30%, 25rem);
+  }
+
+  &__icon {
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+
+  &__heading {
+    @include abstracts.bold-text(var(--fs-600), 1);
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  &__text {
+    @include abstracts.normal-text(var(--fs-400), 1.4);
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+}
+

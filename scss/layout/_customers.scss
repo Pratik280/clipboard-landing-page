@@ -1,0 +1,10 @@
+@use '../abstracts';
+@use '../base';
+
+.customers {
+  padding: 4rem 0;
+  @include abstracts.split(4rem, 10%, 25rem);
+  &__img {
+    height: 4rem;
+  }
+}

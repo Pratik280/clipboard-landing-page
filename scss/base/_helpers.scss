@@ -9,14 +9,3 @@
   justify-content: center;
 }
 
-.split {
-  display: flex;
-  gap: 1em;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  &>* {
-    flex-basis: 30%;
-    min-width: 25em;
-  }
-}
