@@ -77,12 +77,22 @@ global variables, functions, and mixins
   padding: 1.15rem 3.5rem;
   border-radius: 50vw;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  transition: transform 250ms ease-in-out;
+}
+.btn:hover, .btn:focus {
+  transform: translateY(-5%);
 }
 .btn--ios {
   --btn-bgcolor: hsl(171, 66%, 44%);
 }
+.btn--ios:hover, .btn--ios:focus {
+  background-color: #5dccbb;
+}
 .btn--mac {
   --btn-bgcolor: hsl(233, 100%, 69%);
+}
+.btn--mac:hover, .btn--mac:focus {
+  background-color: #8896ff;
 }
 
 .btn-wrapper {
@@ -120,13 +130,18 @@ the site should reside here
 }
 .footer__sitemap-item {
   list-style: none;
+  text-align: center;
+}
+.footer__sitemap-item a {
   font-size: var(--fs-500);
   line-height: 1.4;
   font-family: var(--ff-primary);
   font-weight: 400;
   color: var(--clr-grayish-blue);
   color: var(--clr-dark-grayish-blue);
-  text-align: center;
+}
+.footer__sitemap-item a:hover, .footer__sitemap-item a:focus {
+  color: #6eaca2;
 }
 .footer__socials {
   margin-block: 4rem;

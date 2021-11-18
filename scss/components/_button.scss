@@ -12,8 +12,26 @@
   padding: 1.15rem 3.5rem;
   border-radius: 50vw;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  &--ios { --btn-bgcolor: hsl(171, 66%, 44%); }
-  &--mac { --btn-bgcolor: hsl(233, 100%, 69%); }
+  transition: transform 250ms ease-in-out;
+  &:hover, &:focus {
+    transform: translateY(-5%);
+  } 
+
+  &--ios { 
+      --btn-bgcolor: hsl(171, 66%, 44%); 
+      &:hover,
+      &:focus {
+      background-color: #5dccbb;
+    }
+  }
+  
+  &--mac { 
+      --btn-bgcolor: hsl(233, 100%, 69%); 
+      &:hover,
+      &:focus {
+      background-color: #8896ff;
+    }
+  }
 }
 
 .btn-wrapper {
