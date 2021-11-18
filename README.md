@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Source Code : [Github]()
-- Live Site : []()
+- Source Code : [Github](https://github.com/Pratik280/clipboard-landing-page)
+- Live Site : [Netlify](https://elastic-liskov-15e817.netlify.app/)
 
 ### Screenshot
 
