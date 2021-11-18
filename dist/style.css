@@ -1,0 +1,358 @@
+.container {
+  margin-inline: auto;
+  width: min(90%, 150rem);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --clr-dark-grayish-blue: hsl(210, 10%, 33%);
+  --clr-grayish-blue: hsl(201, 11%, 66%);
+  --clr-footer-bg: #f5f6f8;
+  font-size: 62.5%;
+  --ff-primary: "Bai Jamjuree", sans-serif;
+  --fs-900: 3rem;
+  --fs-700: 2.5rem;
+  --fs-600: clamp(2rem, calc(2vw + 1rem), 1.9rem);
+  --fs-500: clamp(1.9rem, calc(1vw + 1rem), 1.75rem);
+  --fs-400: clamp(1.8rem, calc(1vw + 1rem), 1.5rem);
+}
+
+/* 
+abstracts contains no actual styles, 
+just Sass mechanisms that help define styles 
+in other directories (sometimes called "helpers"). 
+This includes things like 
+global variables, functions, and mixins
+*/
+.btn {
+  display: inline-block;
+  font-size: var(--fs-400);
+  text-align: center;
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  color: #fff;
+  background: var(--btn-bgcolor, black);
+  padding: 1.15rem 3.5rem;
+  border-radius: 50vw;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.btn--ios {
+  --btn-bgcolor: hsl(171, 66%, 44%);
+}
+.btn--mac {
+  --btn-bgcolor: hsl(233, 100%, 69%);
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+@media (min-width: 60em) {
+  .btn-wrapper {
+    flex-direction: row;
+  }
+}
+
+/*
+components are like "mini" layouts. 
+Styles for small, reusable pieces of 
+the site should reside here 
+(think buttons, forms, profile pictures, etc.)
+*/
+.footer {
+  background: var(--clr-footer-bg);
+  padding-top: 4rem;
+}
+.footer__img {
+  display: block;
+  margin: 0 auto;
+  height: 7.5rem;
+  width: 7.5rem;
+}
+.footer__sitemap {
+  margin-block: 4rem;
+  --spacer: 3rem;
+}
+.footer__sitemap-item {
+  list-style: none;
+  font-size: var(--fs-500);
+  line-height: 1.4;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  color: var(--clr-grayish-blue);
+  color: var(--clr-dark-grayish-blue);
+  text-align: center;
+}
+.footer__socials {
+  margin-block: 4rem;
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+.footer__attribution {
+  margin-top: 4rem;
+  text-align: center;
+  font-size: var(--fs-400);
+  line-height: 1.4;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  color: var(--clr-grayish-blue);
+  color: var(--clr-dark-grayish-blue);
+}
+@media (min-width: 60em) {
+  .footer__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer__sitemap {
+    display: flex;
+    gap: 4rem;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+  }
+  .footer__sitemap > * {
+    margin: 0;
+  }
+  .footer__socials {
+    align-items: center;
+    margin: 0;
+  }
+}
+
+.hero {
+  padding: 7rem 0;
+  background: url("../../assets/images/bg-header-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media (min-width: 45em) {
+  .hero {
+    background: url("../../assets/images/bg-header-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+.hero__heading-one {
+  font-size: var(--fs-900);
+  line-height: 1;
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  color: var(--clr-dark-grayish-blue);
+  text-align: center;
+  margin-top: 3.5rem;
+}
+.hero__text--one {
+  margin-top: 2rem;
+  font-size: var(--fs-500);
+  line-height: 1.4;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  color: var(--clr-grayish-blue);
+  text-align: center;
+  max-width: 60rem;
+  margin-inline: auto;
+}
+.hero .btn-wrapper {
+  margin-top: 3rem;
+}
+.hero__heading-two {
+  margin-top: 7.5rem;
+  font-size: var(--fs-700);
+  line-height: 1;
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  color: var(--clr-dark-grayish-blue);
+  text-align: center;
+}
+.hero__text--two {
+  margin-top: 2rem;
+  font-size: var(--fs-400);
+  line-height: 1.4;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  color: var(--clr-grayish-blue);
+  text-align: center;
+  max-width: 60rem;
+  margin-inline: auto;
+}
+
+.main {
+  padding-bottom: 7rem;
+}
+.main__heading {
+  margin-top: 7.5rem;
+  font-size: var(--fs-700);
+  line-height: 1;
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  color: var(--clr-dark-grayish-blue);
+  text-align: center;
+}
+.main__text {
+  margin-top: 2rem;
+  font-size: var(--fs-400);
+  line-height: 1.4;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  color: var(--clr-grayish-blue);
+  text-align: center;
+  max-width: 60rem;
+  margin-inline: auto;
+}
+.main .btn-wrapper {
+  margin-top: 3rem;
+}
+.main__devices-img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.features-one {
+  padding-top: 7.5rem;
+}
+@media (min-width: 60em) {
+  .features-one {
+    display: flex;
+    flex-direction: row;
+    gap: 7.5rem;
+  }
+}
+.features-one__list-item {
+  list-style: none;
+  margin-top: 4rem;
+}
+.features-one__heading {
+  font-size: var(--fs-600);
+  line-height: 1;
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  color: var(--clr-dark-grayish-blue);
+  text-align: center;
+}
+@media (min-width: 60em) {
+  .features-one__heading {
+    text-align: left;
+  }
+}
+.features-one__list-text {
+  font-size: var(--fs-400);
+  line-height: 1.4;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  color: var(--clr-grayish-blue);
+  text-align: center;
+  margin-top: 1rem;
+}
+@media (min-width: 60em) {
+  .features-one__list-text {
+    text-align: left;
+  }
+}
+
+.features-two {
+  padding: 3.5rem 0;
+}
+.features-two__list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.features-two__list > * {
+  flex-basis: 30%;
+  min-width: 25rem;
+}
+.features-two__icon {
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+.features-two__heading {
+  font-size: var(--fs-600);
+  line-height: 1;
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  color: var(--clr-dark-grayish-blue);
+  text-align: center;
+  margin-top: 3rem;
+}
+.features-two__text {
+  font-size: var(--fs-400);
+  line-height: 1.4;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  color: var(--clr-grayish-blue);
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.customers {
+  padding: 4rem 0;
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.customers > * {
+  flex-basis: 10%;
+  min-width: 25rem;
+}
+.customers__img {
+  height: 4rem;
+}
+
+/*# sourceMappingURL=style.css.map */
