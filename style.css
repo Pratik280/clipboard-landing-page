@@ -9,6 +9,10 @@
   justify-content: center;
 }
 
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
 /**
  * Set up a decent box model on the root element
  */
@@ -45,13 +49,14 @@ a {
 :root {
   --clr-dark-grayish-blue: hsl(210, 10%, 33%);
   --clr-grayish-blue: hsl(201, 11%, 66%);
+  --clr-footer-bg: #f5f6f8;
   font-size: 62.5%;
   --ff-primary: "Bai Jamjuree", sans-serif;
   --fs-900: 3rem;
   --fs-700: 2.5rem;
-  --fs-600: clamp(1.6rem, calc(2vw + 1rem), 1.7rem);
-  --fs-500: clamp(1.5rem, calc(1vw + 1rem), 1.75rem);
-  --fs-400: clamp(1.4rem, calc(1vw + 1rem), 1.45rem);
+  --fs-600: clamp(2rem, calc(2vw + 1rem), 1.9rem);
+  --fs-500: clamp(1.9rem, calc(1vw + 1rem), 1.75rem);
+  --fs-400: clamp(1.8rem, calc(1vw + 1rem), 1.5rem);
 }
 
 /* 
@@ -99,6 +104,70 @@ Styles for small, reusable pieces of
 the site should reside here 
 (think buttons, forms, profile pictures, etc.)
 */
+.footer {
+  background: var(--clr-footer-bg);
+  padding-top: 4rem;
+}
+.footer__img {
+  display: block;
+  margin: 0 auto;
+  height: 7.5rem;
+  width: 7.5rem;
+}
+.footer__sitemap {
+  margin-block: 4rem;
+  --spacer: 3rem;
+}
+.footer__sitemap-item {
+  list-style: none;
+  font-size: var(--fs-500);
+  line-height: 1.4;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  color: var(--clr-grayish-blue);
+  color: var(--clr-dark-grayish-blue);
+  text-align: center;
+}
+.footer__socials {
+  margin-block: 4rem;
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+.footer__attribution {
+  margin-top: 4rem;
+  text-align: center;
+  font-size: var(--fs-400);
+  line-height: 1.4;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  color: var(--clr-grayish-blue);
+  color: var(--clr-dark-grayish-blue);
+}
+@media (min-width: 60em) {
+  .footer__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer__sitemap {
+    display: flex;
+    gap: 4rem;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+  }
+  .footer__sitemap > * {
+    margin: 0;
+  }
+  .footer__socials {
+    align-items: center;
+    margin: 0;
+  }
+}
+
 .hero {
   padding: 7rem 0;
   background: url("../../assets/images/bg-header-mobile.png");

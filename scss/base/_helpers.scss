@@ -9,3 +9,6 @@
   justify-content: center;
 }
 
+.spacing > *+* {
+  margin-top: var(--spacer, 2rem);
+}
