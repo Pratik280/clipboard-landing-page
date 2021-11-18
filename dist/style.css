@@ -185,14 +185,14 @@ the site should reside here
 
 .hero {
   padding: 7rem 0;
-  background: url("../../assets/images/bg-header-mobile.png");
+  background: url("images/bg-header-mobile.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 @media (min-width: 45em) {
   .hero {
-    background: url("../../assets/images/bg-header-desktop.png");
+    background: url("images/bg-header-desktop.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

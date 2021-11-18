@@ -4,9 +4,9 @@
 .hero {
 
   padding: 7rem 0;
-  background: url('../../assets/images/bg-header-mobile.png');
+  background: url('images/bg-header-mobile.png');
   @media (min-width: 45em) { 
-    background: url('../../assets/images/bg-header-desktop.png'); 
+    background: url('images/bg-header-desktop.png'); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
