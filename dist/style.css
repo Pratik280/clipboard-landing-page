@@ -151,6 +151,9 @@ the site should reside here
   justify-content: center;
   align-items: flex-start;
 }
+.footer__socials-fig {
+  list-style: none;
+}
 .footer__attribution {
   margin-top: 4rem;
   text-align: center;
